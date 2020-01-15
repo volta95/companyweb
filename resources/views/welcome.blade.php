@@ -27,20 +27,20 @@
         <!-- Styles -->
 
     </head>
-    <body data-spy="scroll" data-target=".fixed-top" data-offset="65">
+    <body data-spy="scroll" data-target="#navbar" data-offset="10">
 
 
     <header>
 
-        <nav class="navbar navbar-expand-md navbar-light fixed-top " id="nav-bar">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top " id="nav-bar" data-spy="affix">
             <a href="#" class="navbar-brand" style="color:#fff">Brand</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <i class="fas fa-bars"></i>
             </button>
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="#home" class="nav-links active smooth-scroll">Home</a>
+                <div class="navbar-nav animated slideInRight" >
+                    <a href="#home" class="nav-links smooth-scroll">Home</a>
                     <a href="#about" class="nav-links smooth-scroll">About us</a>
                     <div class="nav-links dropdown">
                         <a href="#" class="nav-links smooth-scroll" data-toggle="dropdown">What we offer</a>
@@ -64,7 +64,7 @@
                             <a href="#" class="dropdown-item">blog</a>
                         </div>
                     </div>
-                    <a href="#" class="nav-links smooth-scroll">Login</a>
+                <a href="{{route('login')}}" class="nav-links smooth-scroll">Login</a>
 
                 </div>
 
@@ -92,13 +92,55 @@
                                 <div class="talk"><a class="talk-button"  href="">Talk to our team</a></div>   </div>
                         </div>
                     </div>
-
-
                 </div>
-                <div id="target" class="carousel-item slider-two"></div>
-                <div class="carousel-item slider-three">jumaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                <div class="carousel-item slider-four">jumaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                <div class="carousel-item">jumaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                <div id="target" class="carousel-item slider-two">
+                    <div id="home-content-box">
+                        <div id="home-content-box-inner">
+                            <div id="home-heading" class="animated zoomIn">
+                                <h3>MOBILE DEVELOPMENT</h3>
+                                <p style=""> </p>
+                            </div>
+                            <div id="home-btn" class="animated zoomIn">
+                                <div class="talk"><a class="talk-button"  href="">Talk to our team</a></div>   </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-three">
+                    <div id="home-content-box">
+                        <div id="home-content-box-inner">
+                            <div id="home-heading" class="animated zoomIn">
+                                <h3>NETWORK CONFIGURATION & NETWORK TROUBLESHOOT</h3>
+                                <p style=""> </p>
+                            </div>
+                            <div id="home-btn" class="animated zoomIn">
+                                <div class="talk"><a class="talk-button"  href="">Talk to our team</a></div>   </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-four">
+                    <div id="home-content-box">
+                        <div id="home-content-box-inner">
+                            <div id="home-heading" class="animated zoomIn">
+                                <h3>WEB DESIGN & WEB SYSTEM DEVELOPMENT</h3>
+                                <p style=""> </p>
+                            </div>
+                            <div id="home-btn" class="animated zoomIn">
+                                <div class="talk"><a class="talk-button"  href="">Talk to our team</a></div>   </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div id="home-content-box">
+                        <div id="home-content-box-inner">
+                            <div id="home-heading" class="animated zoomIn">
+                                <h3>DEVICE MAINTAINANCE AND REPAIRE</h3>
+                                <p style=""> </p>
+                            </div>
+                            <div id="home-btn" class="animated zoomIn">
+                                <div class="talk"><a class="talk-button"  href="">Talk to our team</a></div>   </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -288,7 +330,7 @@
                                      and industry within a shorter time frame.
 
                                      </P>
-                                     <a href="" class="readmo">Read more</a>
+
                                 </div>
                             </div>
                         </div>
@@ -318,7 +360,6 @@
                                           and improve operations by optimising your software portfolio.
 
                                          </P>
-                                         <span class="readmo">Read more</span>
 
                                 </div>
                             </div>
@@ -331,12 +372,11 @@
                                 </div>
 
                                 <div class="col-lg-8 col-md-8 col-sm-8">
-                                    <h6>EQUIPMENT MAINTAINANCE & REPAIRE</h6>
+                                    <h6>DEVICE MAINTAINANCE & REPAIRE</h6>
                                     <P class="service-desc">
                                         Zealous Company’s computer repair services can breathe life into even the most troublesome
                                          machines and save alot of money over purchasing new computers.
                                          </P>
-                                        <span class="readmo">Read more</span>
 
                                 </div>
                             </div>
@@ -355,7 +395,6 @@
                                       your website, packaging, social media and more, your brand gets visibility.
 
                                     </P>
-                                    <span class="readmo">Read more</span>
 
                                 </div>
                             </div>
@@ -384,7 +423,6 @@
                                     and can be used as a powerful marketing tool to attract new customers and investors
 
                                 </P>
-                                <span class="readmo">Read more</span>
 
                                 </div>
                             </div>
@@ -445,25 +483,25 @@
                     </div>
         <div class="row">
 
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top:35px">
                 <div class="work-card">
 
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top:35px">
                 <div class="work-card">
 
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-top:35px">
+        <div class="row" >
 
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top:35px">
                 <div class="work-card">
 
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top:35px">
                 <div class="work-card">
 
                 </div>
@@ -774,7 +812,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div id="footer-copyrights">
-                                    <p>Copyrights &copy; <span id="year"></span> All Rights Reserved by Davidkingdom Inc.</p>
+                                    <p>Copyrights &copy; <span id="year"></span> All Rights Reserved by Zealous It solution.</p>
                                 </div>
                                 <script>
                                     document.getElementById("year").innerHTML = new Date().getFullYear();
