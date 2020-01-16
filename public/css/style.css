@@ -185,7 +185,11 @@
     margin-left: 10px;
     margin-right: 10px;
 }
-
+.logo{
+    height: 50px;
+    width: 70px;
+    margin-left: 10px;
+}
 .navbar-nav{
     margin-left:20%;
 

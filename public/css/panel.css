@@ -24,7 +24,7 @@ body,html{
 
 .card-login{
 width: 300px;
-height: 362px;
+height: 380px;
 background: #2EC4B6;
 border-radius: 15px;
 margin-top: 10%;
@@ -90,4 +90,11 @@ margin-top: 10px;
 .forgot-password{
  color: white;
  margin-left: 70px;
+}
+.auth-img{
+    height:50px;
+    width:100px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+
 }

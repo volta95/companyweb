@@ -33,7 +33,7 @@
     <header>
 
         <nav class="navbar navbar-expand-md navbar-light fixed-top " id="nav-bar" data-spy="affix">
-            <a href="#" class="navbar-brand" style="color:#fff">Brand</a>
+        <a href="#" class="navbar-brand" style="color:#fff"><img class="logo"  src="{{asset('images/logo3.png')}}"></a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <i class="fas fa-bars"></i>
             </button>

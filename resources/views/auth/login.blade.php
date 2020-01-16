@@ -3,8 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-            <div class="card-login">
+            <div class="card-login animated shake">
                         <h6 class="auth-header">Welcome</h6>
+                         <img src="{{asset('images/logo2.png')}}" class="auth-img">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
