@@ -46,38 +46,48 @@ margin-right: auto;
 margin-top: 10px;
 }
 
-.form-control{
-    width: 211.06px;
-    box-sizing: border-box;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px  solid rgba(245, 241, 241, 0.7);
-    margin-left: 45px;
-    color: #fff;
 
-}
-.form-control:hover{
-    width: 211.06px;
-    box-sizing: border-box;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px  solid rgba(245, 241, 241, 0.7);
-    margin-left: 45px;
-    color: #fff;
 
-}
-.form-control:active{
+.card-login input[type="email"],
+.card-login input[type="password"],
+.card-login input[type="email"]:focus,
+.card-login input[type="password"]:focus
+ {
     width: 211.06px;
     box-sizing: border-box;
-    background-color: transparent;
-    border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	padding: 7px;
+	border: none;
     border-bottom: 2px  solid rgba(245, 241, 241, 0.7);
     margin-left: 45px;
     color: #fff;
+    background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
 
 }
 .form-group{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+}
+.form-check{
+    margin-left:45px;
+    color: white;
+}
+
+.btn-login{
+    width: 211.6px;
+    height: 35px;
+    color:#fff;
+    background: #E71D36;
+    border-radius: 10px;
+    margin-left:45px;
+}
+.forgot-password{
+ color: white;
+ margin-left: 70px;
 }
