@@ -653,7 +653,7 @@
 <section id="team" class="bg-parallax">
     <div class="content-box">
         <div class="content-title  wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-            <h3 style="color:#fff">Meet our amaizing Team</h3>
+            <h4 class="sect-tittle" style="color:#fff">Meet our amaizing team</h4>
             <div class="content-title-underline"></div>
         </div>
             <div class="container wow slideInRight" data-wow-duration="2s" data-wow-delay=".7s">
