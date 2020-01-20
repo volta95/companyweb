@@ -76,10 +76,15 @@
                 </div>
             </div>
         </nav>
+        <div class="contents">
+            <div id="side-bar">
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+            </div>
+            <main class="py-4">
+                @yield('content')
+            </main>
+        </div>
+
     </div>
         @endguest
 
