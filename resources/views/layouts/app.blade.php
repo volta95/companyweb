@@ -78,6 +78,12 @@
         </nav>
         <div class="contents">
             <div id="side-bar">
+                <div class="profile">
+
+                    <img src="{{asset('images/humudi.jpg')}}" class="round-pic">
+                <h6><span class="welcome">Welcome,</span><br>{{Auth::user()->name}}<i class="fas icon-dropdwn fa-caret-down"></i></h6>
+
+                </div>
 
             </div>
             <main class="py-4">

@@ -142,4 +142,25 @@ $(function () {
     })
 });
 
+/*=============================================
+                  Panel
+==============================================*/
+$(function(){
+    $(".maximize").click(function(event){
+        $("#side-bar").addClass("hide");
+        $("#side-bar").removeClass("show");
+        $(".maximize").addClass("hide");
+        $(".maximize").removeClass("show")
+        $(".minimize").removeClass("hide");
+        $(".minimize").addClass("show");
+    })
 
+    $(".minimize").click(function(event){
+        $("#side-bar").addClass("show");
+        $("#side-bar").removeClass("hide");
+        $(".maximize").addClass("show");
+        $(".maximize").removeClass("hide")
+        $(".minimize").removeClass("show");
+        $(".minimize").addClass("hide");
+    })
+})
