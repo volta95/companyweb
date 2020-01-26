@@ -24,7 +24,27 @@
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
         chart.draw(data, options);
+
+        var data_pie = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options_pie = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart_pie = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart_pie.draw(data_pie, options_pie);
       }
+
+
+
     </script>
 
 
@@ -61,7 +81,7 @@
         <div class="row" style="width:100%;">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="dash-graph-project">
-                    <div id="curve_chart" ></div>
+                    <div id="curve_chart" class="chart" ></div>
                 </div>
             </div>
 
@@ -118,7 +138,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="dash-card-sec">
-
+                    <div id='calendar'></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
@@ -126,8 +146,79 @@
 
                 </div>
             </div>
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="dash">
+                 <div style="padding:15px;">
+                    <table  id="dt-table" class="table table-striped hover table-bordered table-sm" cellspacing="0" width="100%">
+                        <thead style="background-color:#212529;color:#fff;height:30px;border-radius:5px;" >
+                      <tr>
+                        <th class="th-sm">
+                            No:
+                        </th>
+                        <th class="th-sm">
+                            Client
+                        </th>
+                        <th class="th-sm">
+                            Project
+                        </th>
+                        <th class="th-sm">
+                            Leader
+                        </th>
+                        <th class="th-sm">
+                            Price
+                        </th>
+                        <th class="th-sm">
+                            deadline
+                        </th>
+                        <th class="th-sm">
+                            status
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+
+
+
+                          <tr>
+                                <td class="style-list-table"></td>
+                                <td class="style-list-table"></td>
+                                <td class="style-list-table"></td>
+                                <td class="style-list-table"></td>
+                                <td class="style-list-table"></td>
+                                <td class="style-list-table"></td>
+                                <td class="style-list-table"> <a  href="" ></a></td>
+                         </tr>
+
+
+
+
+
+                    </tbody>
+
+                  </table>
+                </div>
+            </div>
+        </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="dash">
+                    <div id="piechart_3d" class="chart"></div>
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#dt-table').DataTable(
+
+                 {
+        "lengthMenu": [[ 5, 4, -1], [ 5, 4, 3]],
+        "info":     false,
+        "searching": false ,
+                }
+                                   );
+                } );
+</script>
 @endsection
