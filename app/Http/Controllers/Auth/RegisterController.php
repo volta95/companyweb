@@ -64,6 +64,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $path = $data['file']->store('public');
         return User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
@@ -71,6 +72,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
             'gender' => $data['gender'],
             'password' => Hash::make($data['password']),
+            'images' => $path,
         ]);
     }
 }

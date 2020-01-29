@@ -18,6 +18,8 @@ class CreateEnquiresTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('message');
+            $table->string('token');
+            $table->boolean('served');
             $table->string('file')->default('no file');
             $table->timestamps();
         });

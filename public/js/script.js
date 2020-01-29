@@ -163,4 +163,14 @@ $(function(){
         $(".minimize").removeClass("show");
         $(".minimize").addClass("hide");
     })
+
+    $(".drpwn-bottn").click(function(event){
+        if($("#drpdwn-list").hasClass('show')){
+            $("#drpdwn-list").removeClass("show")
+            $("#drpdwn-list").addClass("hide")
+        } else{
+            $("#drpdwn-list").removeClass("hide")
+            $("#drpdwn-list").addClass("show")
+        }
+    })
 })

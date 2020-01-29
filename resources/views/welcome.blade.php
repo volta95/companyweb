@@ -22,7 +22,25 @@
         <!-- font awesome -->
         <script src="https://kit.fontawesome.com/2e5f65967e.js" crossorigin="anonymous"></script>
 
-
+        <script type="text/javascript">
+            function changeText(cont1,cont2,speed){
+                var Otext=cont1.text();
+                var Ocontent=Otext.split("");
+                var i=0;
+                function show(){
+                    if(i<Ocontent.length)
+                    {
+                        cont2.append(Ocontent[i]);
+                        i=i+1;
+                    };
+                };
+                    var Otimer=setInterval(show,speed);
+            };
+            $(document).ready(function(){
+                changeText($("p"),$(".p2"),150);
+                clearInterval(Otimer);
+            });
+            </script>
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <!-- Styles -->
 
@@ -86,7 +104,7 @@
                         <div id="home-content-box-inner">
                             <div id="home-heading" class="animated zoomIn">
                                 <h3>WEB DESIGN & WEB SYSTEM DEVELOPMENT</h3>
-                                <p style=""> </p>
+                                <p class="banner-desc"> </p>
                             </div>
                             <div id="home-btn" class="animated zoomIn">
                                 <div class="talk"><a class="talk-button"  href="">Talk to our team</a></div>   </div>
@@ -790,15 +808,21 @@
                             </div>
                             <div class="col-md-6">
                                 <div id="contact-right">
+                                    @if (session('status'))
+                                         <div class="alert alert-success">
+                                            {{ session('status') }}
+                                         </div>
+                                    @endif
                                     <h3>FREE ENQUIRE</h3>
-                                    <form action="#">
+                                    <form action="{{ route('enquire.store') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
                                         <input type="text" name="full-name" placeholder="Full Name" class="form-control">
                                         <input type="text" name="email" placeholder="Email Address" class="form-control">
                                         <textarea rows="5" name="message" placeholder="Message..." class="form-control"></textarea>
                                         <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                                         <label for="file"><i class=" icon-download fas fa-cloud-upload-alt"></i>upload a file</label>
                                         <div id="send-btn" style="margin-top:10px;">
-                                            <a class="btn btn-general bton-white" href="#" role="button">SEND</a>
+                                            <input type="submit" class="btn btn-general bton-white" role="button" value="SEND"/>
                                         </div>
                                     </form>
                                 </div>

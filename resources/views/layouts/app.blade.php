@@ -84,25 +84,39 @@
         </nav>
         <div class="contents">
             <div id="side-bar">
+                <div style="position:fixed">
+                    <div style="position:relative">
                 <div class="profile">
-
-                    <img src="{{asset('images/humudi.jpg')}}" class="round-pic">
+                    <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                    <img src="{{Storage::url(Auth::user()->images)}}" class="round-pic">
+                    </div>
+                    <div class="col-lg-8 col-md-8">
                 <h6><span class="welcome">Welcome,</span><br>{{ Auth::user()->fname . ' '.Auth::user()->lname }}<i class="fas icon-dropdwn fa-caret-down"></i></h6>
-
+                    </div>
+                    </div>
                 </div>
                 <div class="side-nav">
                     <ul>
-                        <li>Dashboard</li>
-                        <li>Inbox App</li>
-                        <li>Enquires</li>
-                        <li>Chat App</li>
-                        <li>Projects</li>
-                        <li>Clients</li>
-                        <li>Social</li>
-                        <li>Employee</li>
+                        <li><a href=""><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                        <li><a href=""><i class="fas fa-envelope"></i>Inbox App</a></li>
+                        <li><a href="enquire"><i class="fas fa-inbox"></i>Enquires</a></li>
+                        <li><a href="chat"><i class="fas fa-comments"></i>Chat App</a></li>
+                        <div class="drpdwn-side">
+                        <li><a class="drpwn-bottn" href="#"><i class="fas fa-briefcase"></i>Projects</a></li>
+                        <div id="drpdwn-list" class="hide">
+                                <li><a href=""><i class="fas fa-list"></i>View Projects</a></li>
+                                <li><a href=""><i class="fas fa-plus-circle"></i>Add Projects</a></li>
+                        </div>
+                            </div>
+
+                        <li><a href=""><i class="fas fa-handshake"></i>Clients</a></li>
+                        <li><a href=""><i class="fas fa-globe"></i>Social</a></li>
+                        <li><a href=""><i class="fas fa-users"></i>Employee</a></li>
                     <ul>
                 </div>
-
+                    </div>
+              </div>
             </div>
             <main class="py-4">
                 @yield('content')
