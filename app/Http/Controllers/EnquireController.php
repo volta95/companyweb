@@ -16,7 +16,11 @@ class EnquireController extends Controller
      */
     public function index()
     {
-        //
+        //Retrieve all enquire
+
+        $enquires=Enquire::latest()->simplePaginate(9);
+        return view('enquire.index',['enquires'=>$enquires]);
+
     }
 
     /**
@@ -93,6 +97,9 @@ class EnquireController extends Controller
     public function show($id)
     {
         //
+
+        $enquire=Enquire::where('id',$id)->first();
+
     }
 
     /**

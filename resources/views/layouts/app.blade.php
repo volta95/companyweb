@@ -98,7 +98,7 @@
                 </div>
                 <div class="side-nav">
                     <ul>
-                        <li><a href=""><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                        <li><a href="home"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
                         <li><a href=""><i class="fas fa-envelope"></i>Inbox App</a></li>
                         <li><a href="enquire"><i class="fas fa-inbox"></i>Enquires</a></li>
                         <li><a href="chat"><i class="fas fa-comments"></i>Chat App</a></li>

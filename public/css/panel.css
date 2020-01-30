@@ -299,3 +299,18 @@ font-size: 14px;
 
 }
 
+.enquire-table{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-top: 60px;
+}
+th{
+    background-color: #E71D36;
+    color: #fff;
+    border-radius: 2px;
+}
+
+
