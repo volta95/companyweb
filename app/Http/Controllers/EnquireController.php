@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Enquire;
 use Mail;
+use Storage;
 
 class EnquireController extends Controller
 {
@@ -14,6 +15,14 @@ class EnquireController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function isa_convert_bytes_to_specified($bytes, $to, $decimal_places = 1) {
+        $formulas = array(
+            'K' => number_format($bytes / 1024, $decimal_places),
+            'M' => number_format($bytes / 1048576, $decimal_places),
+            'G' => number_format($bytes / 1073741824, $decimal_places)
+        );
+        return isset($formulas[$to]) ? $formulas[$to] : 0;
+    }
     public function index()
     {
         //Retrieve all enquire
@@ -97,8 +106,24 @@ class EnquireController extends Controller
     public function show($id)
     {
         //
-
         $enquire=Enquire::where('id',$id)->first();
+        $bytes = Storage::size($enquire->file);
+        $size= $this->isa_convert_bytes_to_specified($bytes, 'K',2);
+        if($size>1024){
+            $size= $this->isa_convert_bytes_to_specified($bytes, 'M',2);
+            if($size>1024){
+            $size= $this->isa_convert_bytes_to_specified($bytes, 'G',2);
+            $size=$size.' Gb';
+            }
+            else{
+            $size=$size.' Mb';
+            }
+        }
+        else{
+        $size=$size.' kb';
+        }
+        return view('enquire.show',['enquire'=>$enquire,'size'=>$size]);
+
 
     }
 
@@ -123,6 +148,15 @@ class EnquireController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $enquire=Enquire::where('id',$id)->first();
+        $Enquire=Enquire::where('id',$enquire->id)->update([
+            'served'=>1
+            ]);
+
+            if($Enquire){
+                return redirect()->route('enquire.show',['enquire'=>$enquire->id])->with('success',
+                'issue no '.$enquire->token. ' served');
+            }
     }
 
     /**
@@ -135,4 +169,18 @@ class EnquireController extends Controller
     {
         //
     }
+
+      /**
+     * download the specified file resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function download($id)
+    {
+        //
+        $enquire=Enquire::where('id');
+
+    }
+
 }

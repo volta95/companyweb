@@ -1,4 +1,5 @@
 <?php
+use App\Http\Middleware\CheckAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::resource('enquire', 'EnquireController');
+Route::resource('enquire', 'EnquireController')->middleware(CheckAuth::class);
 
+Route::get('/enquire/download', 'EnquireController@download')->name('download');
 

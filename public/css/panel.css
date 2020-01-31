@@ -313,4 +313,56 @@ th{
     border-radius: 2px;
 }
 
+.card-white{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 5vh;
+    border-radius: 10px;
 
+}
+.enquire-desc{
+    height: 70vh;
+    padding: 25px;
+    padding-top: 30px;
+
+}
+.enquire-down{
+    height: 20vh;
+}
+.enquire-info{
+    height: 45vh;
+    padding: 30px;
+    text-transform: capitalize;
+    font-weight: bolder;
+
+}
+.enquire-info .row{
+   padding-bottom: 10px;
+
+
+}
+.colm {
+
+    padding: 5px;
+
+
+ }
+.enquire-info .row:nth-child(odd){
+    background-color: #E71D36;
+    padding: 5px;
+    color: #fff;
+}
+.enquire-download{
+    font-size: 100px;
+    transform: scale(1.5,1);
+    margin-left: 40%;
+    margin-top: 10px;
+    position: relative;
+    color: #2EC4B6;
+}
+.enquire-info i{
+    padding: 5px;
+    border: 1px solid #fff;
+    margin-right: 10px;
+    color: #fff;
+}
